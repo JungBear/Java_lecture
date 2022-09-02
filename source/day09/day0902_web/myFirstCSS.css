@@ -1,0 +1,27 @@
+
+span{
+    background-color: crimson;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: aliceblue;
+}
+
+th, td{
+    
+    padding: 10px;
+}
+td:hover { background-color: black; }
+
+#colorBlue{
+    color: blue;
+}
+
+.colorBrown{
+    color:brown;
+}
+#colorPink{
+    background-color: blueviolet;
+    color:pink;
+}
