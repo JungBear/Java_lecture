@@ -1,0 +1,17 @@
+let num = 95;
+switch(num){
+    case 90:
+        console.log(num+'입니다');
+        break;
+    case 95:
+        console.log(num+'입니다');
+        break;
+    case 100:
+        console.log(num+'입니다');
+        break;
+    default:
+        console.log('default')
+}
+
+let result = 2>5? '참':'거짓';
+console.log(result);
