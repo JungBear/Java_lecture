@@ -87,17 +87,17 @@
 // console.log(mulMaxMin(numList,secNumlist))
 
 // 배열 작은순 정렬
-let sortList = [15,25,1,0,-5,6,-22]
-function sortListArr(list){
-    for (let i = 0 ; i <list.length ; i++) {
-        for (let j = 0 ; j<list.length; j++) {
-            if(list[j] > list[j+1]){
-                let temp = list[j];
-                list[j] = list[j+1];
-                list[j+1] = temp;
-            }
-        }
-    }
-    return list
-}
-console.log(sortListArr(sortList))
+// let sortList = ['a',true,false,1.1,20,15,25,0,-5,6,-22]
+// function sortListArr(list){
+//     for (let i = 0 ; i <list.length ; i++) {
+//         for (let j = 0 ; j<list.length-i; j++) {
+//             if(list[j] > list[j+1]){
+//                 let temp = list[j];
+//                 list[j] = list[j+1];
+//                 list[j+1] = temp;
+//             }
+//         }
+//     }
+//     return list
+// }
+// console.log(sortListArr(sortList))
