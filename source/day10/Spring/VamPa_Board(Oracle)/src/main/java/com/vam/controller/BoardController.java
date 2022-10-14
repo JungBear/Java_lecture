@@ -35,7 +35,7 @@ public class BoardController {
         model.addAttribute("list", bservice.getListPaging(cri));
 
         //페이징 처리
-        int total = bservice.getTotal();
+        int total = bservice.getTotal(cri);
         PageMakerDTO pageMake = new PageMakerDTO(cri, total);
         model.addAttribute("pageMaker", pageMake);
     }
@@ -48,11 +48,18 @@ public class BoardController {
         //return "WEB-INF/views/board/enroll.jsp"	화면 띄워줌
     }
     
+    
     /* 게시판 등록 기능 */
     @PostMapping("/enroll")
     public String boardEnrollPOST(BoardVO board, RedirectAttributes rttr) {
         log.info("BoardVO : " + board);
-        bservice.enroll(board);
+        try {
+			bservice.enroll(board);
+		} catch (Exception e) {
+			rttr.addFlashAttribute("result", "enroll fail");
+			e.printStackTrace();
+			return "redirect:/board/list";
+		}
         rttr.addFlashAttribute("result", "enroll success");
         //void일 경우 localhost:8080/board/enroll 요청 보냄
         return "redirect:/board/list";
